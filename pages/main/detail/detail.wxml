@@ -1,0 +1,50 @@
+<view class='main'>
+  <scroll-view scroll-y style='height:100%;position:fixed;'>
+    <image class='content1_img' src='{{commodity.img}}'></image>
+    <view class='content2'>
+      <view class='content2_top'>
+        <view class='content2_top_title'>{{commodity.title}}</view>
+        <view class='content2_top_selled'>已售{{commodity.selled}}件</view>
+      </view>
+      <view class='content2_bottom'>
+        <view class='content2_bottom_hint'>限时促销</view>
+        <view class='content2_bottom_price'>￥{{commodity.price}}</view>
+        <view class='content2_bottom_oprice'>￥{{commodity.old_price}}</view>
+      </view>
+    </view>
+    <view class='content3'>
+      <view class='content3_promotion'>促销</view>
+      <view class='content3_discount'>折扣</view>
+      <view class='content3_ddetail'>前25件享受立减{{commodity.old_price-commodity.price}}元优惠</view>
+    </view>
+    <view class='content4'>
+      <view class="content4_tab {{current==0?'on':''}}" id="0" bindtap="switchNav">商品介绍</view>
+      <view class="content4_tab {{current==1?'on':''}}" id="1" bindtap="switchNav">参数信息</view>
+    </view>
+    <view wx:if="{{current==0}}">
+      <image style='width:100%;height:900rpx;' src='../../../images/intro1.jpg'></image>
+      <image style='width:100%;height:1000rpx;' src='../../../images/intro2.jpg'></image>
+    </view>
+    <view wx:else>
+      <view style="width:100%;height:100rpx;line-height:100rpx;font-size:28rpx;color:#515666;text-align:center;">暂无详细信息</view>
+    </view>
+    <view style="width:100%;height:100rpx;"></view>
+  </scroll-view>
+  <!--底部导航栏：首页、收藏、加入购物车、立即购买-->
+  <view class='bottom'>
+    <view class='bottom_item'>
+      <image class='bottom_item_img' src='../../../images/service_on.png'></image>
+      <view class='bottom_item_txt'>鱼宝管家</view>
+    </view>
+    <view wx:if="{{!iscollect}}" class='bottom_item' bindtap='collect'>
+      <image class='bottom_item_img' src='../../../images/start_off.png'></image>
+      <view class='bottom_item_txt'>收藏</view>
+    </view>
+    <view wx:else class='bottom_item' bindtap='collect' bindtap='collect'>
+      <image class='bottom_item_img' src='../../../images/start_on.png'></image>
+      <view class='bottom_item_txt'>已收藏</view>
+    </view>
+    <view class='bottom_btn1' bindtap='addCar'>加入购物车</view>
+    <view class='bottom_btn2' bindtap='buy'>立即购买</view>
+  </view>
+</view>

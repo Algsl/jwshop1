@@ -1,0 +1,24 @@
+<view class='main'>
+  <form bindsubmit='formsubmit'>
+    <view class='content'>
+      <view class='content_view'>
+        <image class='content_view_img' src='../../../images/search.png'></image>
+        <input class='content_view_input' name='input' placeholder='请输入搜索的内容'></input>
+      </view>
+      <button class='content_view_btn' form-type='submit' >搜索</button>
+    </view>
+  </form>
+  <scroll-view scroll-y style='height:100%;position:fixed;'>
+    <view wx:for='{{commodity}}' wx:key="item">
+      <navigator url='../../main/detail/detail?id={{item.id}}' class='item'>
+        <image class='item_img' src='{{item.img}}'></image>
+        <view style='display:flex;flex-direction:column;'>
+          <view class='item_title'>{{item.title}}</view>
+          <view class='item_price'>￥ {{item.price}}</view>
+        </view>
+      </navigator>
+    </view>
+    <view class='over'>没有更多了</view>
+    <view style="width:100%;height:20rpx;"></view>
+  </scroll-view>
+</view>

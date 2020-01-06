@@ -1,0 +1,82 @@
+<view class="main">
+  <swiper class='swiper' autoplay='true' indicator-dots='true' >
+    <view wx:for="{{1}}" wx:key="item">
+      <swiper-item>
+        <image class='sp_img' src='https://jwshop.gesilaa6.club/images/shop/swipe.png'></image>
+      </swiper-item>
+    </view>
+  </swiper> 
+  <view class='content1'>
+    <view class='content1_row'>
+      <view wx:for="{{content1_row1}}" wx:key="item">
+        <view id='{{item.id}}' bindtap='toClassify' class='content1_item'>
+          <image class='content1_item_icon' src='{{item.img}}'></image>
+          <view class='content1_item_txt'>{{item.txt}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='content1_row'>
+      <view wx:for="{{content1_row2}}" wx:key="item">
+        <view id='{{item.id}}' bindtap='toClassify' class='content1_item'>
+          <image class='content1_item_icon' src='{{item.img}}'></image>
+          <view class='content1_item_txt'>{{item.txt}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='content2'>
+    <view class='content2_top'>
+      <view class='line_column'></view>
+      <view style='display:flex;flex-direction:column;'>
+        <view class='content2_top_t'>春节特惠</view>
+        <view style='display:flex;flex-direction:row;'>
+          <view class='content2_top_left'>低价位高品质</view>
+          <navigator url='../main/more/more' style='display:flex;flex-direction:row;margin-left: 400rpx;'>
+            <view class='content2_top_right'>更多</view>
+            <image class='content2_top_rimg' src='../../images/more.png'></image>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    <swiper class='content2_sp' autoplay='true'>
+      <view wx:for="{{content2.length/2}}" wx:key="index">
+        <swiper-item>
+          <view style='display:flex;flex-direction:row;'>
+            <navigator url='../main/detail/detail?id={{content2[index*2].id}}' class='content2_item'>
+              <image class='content2_item_img' src='{{content2[index*2].img}}'></image>
+              <view class='content2_item_txt'>{{content2[index*2].title}}</view>
+            </navigator>
+            <navigator  url='../main/detail/detail?id={{content2[index*2+1].id}}' class='content2_item'>
+              <image class='content2_item_img' src='{{content2[index*2+1].img}}'></image>
+              <view class='content2_item_txt'>{{content2[index*2+1].title}}</view>
+            </navigator>
+          </view>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  <view class='content3'>
+    <view class='content2_top'>
+      <view class='line_column'></view>
+      <view style='display:flex;flex-direction:column;'>
+        <view class='content2_top_t'>国家馆</view>
+        <view style='display:flex;flex-direction:row;'>
+          <view class='content2_top_left'>汇聚全球精品</view>
+        </view>
+      </view>
+    </view>
+    <view class='content3_cont'>
+      <view wx:for="{{content3.length/3}}" wx:key="index" style='display:flex;flex-direction:row;'> 
+        <navigator url='../main/all/all?id={{content3[index*3].id}}'  class='content3_cont_view'>
+          <image class='content3_cont_item' src='{{content3[index*3].img}}'></image>
+        </navigator>
+        <navigator url='../main/all/all?id={{content3[index*3+1].id}}'  class='content3_cont_view'>
+          <image class='content3_cont_item' src='{{content3[index*3+1].img}}'></image>
+        </navigator>
+        <navigator url='../main/all/all?id={{content3[index*3+2].id}}'  class='content3_cont_view'>
+          <image class='content3_cont_item' src='{{content3[index*3+2].img}}'></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

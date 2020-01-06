@@ -1,0 +1,36 @@
+<view class="main">
+  <navigator url='../classify/search/search' class='top'>
+    <image class='top_img' src='../../images/search.png'></image>
+    <view class='top_txt'>搜索</view>
+  </navigator>
+  <view class='content'>
+    <view class='content_left'>
+      <scroll-view scroll-y style="height:100%;" scroll-with-animation="true" scroll-into-view="true">
+        <view wx:for="{{left}}" bindtap='left' wx:key="index"> 
+          <view class="{{tselect==index?'on':'off'}}" id="{{index}}">{{item.title}}</view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='content_right'>
+      <scroll-view scroll-y="true" style='height:100%;'>
+        <view wx:for="{{right.length/3}}" wx:key="index">
+          <view style='display:flex;flex-direction:row;'>
+            <view class='content_right_item'>
+              <image class='content_right_item_img' wx:if="{{right[index*3].simg}}" src='{{right[index*3].simg}}'></image>
+              <view class='content_right_item_txt'>{{right[index*3].sintro}}</view>
+            </view>
+            <view class='content_right_item'>
+              <image class='content_right_item_img'  wx:if="{{right[index*3+1].simg}}" src='{{right[index*3+1].simg}}'></image>
+              <view class='content_right_item_txt'>{{right[index*3+1].sintro}}</view>
+            </view>
+            <view class='content_right_item'>
+              <image class='content_right_item_img'  wx:if="{{right[index*3+2].simg}}" src='{{right[index*3+2].simg}}'></image>
+              <view class='content_right_item_txt'>{{right[index*3+2].sintro}}</view>
+            </view>
+          </view>
+        </view>
+        <view style="height:20rpx;"></view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

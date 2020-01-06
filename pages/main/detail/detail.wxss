@@ -1,0 +1,186 @@
+.main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: #F7F9FC;
+}
+
+.content1_img{
+  width: 100%;
+  height: 580rpx;
+}
+
+.content2{
+  width: 100%;
+  height: 190rpx;
+  display: flex;
+  flex-direction: column;
+  background: url(https://jwshop.gesilaa6.club/images/shop/food_info.png);
+}
+.content2_top{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+}
+.content2_top_title{
+  width: 500rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 40rpx;
+  font-size: 32rpx;
+  color: #F7F9FC;
+}
+.content2_top_selled{
+  width: 160rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-left: 24rpx;
+  font-size: 28rpx;
+  color: #F7F9FC;
+}
+.content2_bottom{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+}
+.content2_bottom_hint{
+  width: 140rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+  margin-left: 40rpx;
+  border-radius: 16rpx;
+  background: #C6C8D1;
+  font-size: 24rpx;
+  color: #FF4081;
+  text-align: center;
+}
+.content2_bottom_price{
+  width: 160rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  line-height: 60rpx;
+  font-size: 36rpx;
+  color: #FFFFFF;
+}
+.content2_bottom_oprice{
+  width: 160rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  text-decoration: line-through;
+}
+
+.content3{
+  width: 100%;
+  height: 100rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  background: #FFFFFF;
+}
+.content3_promotion{
+  width: 56rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 40rpx;
+  font-size: 28rpx;
+  color: #202437;
+}
+.content3_discount{
+  width: 80rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top:28rpx;
+  margin-left: 64rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #E51C23;
+  border: 2rpx solid #E51C23;
+}
+.content3_ddetail{
+  width: 360rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 14rpx;
+  font-size: 28rpx;
+  color: #797E8B;
+}
+
+.content4{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 40rpx;
+  background: #FFFFFF;
+}
+.content4_tab{
+  width: 50%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color:#A0A3AF;
+}
+.on{
+  color:#515666;
+  font-size: 28rpx; 
+  border-bottom:5rpx solid #1EC996;
+}
+
+.bottom{
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  bottom: 0rpx;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+}
+.bottom_item{
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1rpx solid #E1E2E6;
+}
+.bottom_item_img{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  margin-top: 8rpx;
+}
+.bottom_item_txt{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 20rpx;
+}
+.bottom_btn1{
+  width: 275rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: white;
+  background: #F29901;
+}
+.bottom_btn2{
+  width: 275rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: white;
+  background: #FF4644;
+}
+
+::-webkit-scrollbar{
+  width: 0rpx;
+  height: 0rpx;
+  color: transparent;
+}

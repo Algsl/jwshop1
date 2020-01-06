@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/main/all/all",
+    "pages/main/more/more",
+    "pages/main/detail/detail",
+    "pages/classify/classify",
+    "pages/classify/search/search",
+    "pages/scart/scart",
+    "pages/scart/calculate/calculate",
+    "pages/user/user",
+    "pages/user/about/about",
+    "pages/user/card/card",
+    "pages/user/collect/collect",
+    "pages/user/help/help",
+    "pages/user/order/order"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "精卫商城",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "/images/main_off.png",
+        "selectedIconPath": "/images/main_on.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "/images/classify_off.png",
+        "selectedIconPath": "/images/classify_on.png"
+      },
+      {
+        "pagePath": "pages/scart/scart",
+        "text": "购物车",
+        "iconPath": "/images/scart_off.png",
+        "selectedIconPath": "/images/scart_on.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/images/me_off.png",
+        "selectedIconPath": "/images/me_on.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
